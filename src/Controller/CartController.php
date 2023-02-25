@@ -26,9 +26,6 @@ class CartController extends AbstractController
     {
         
         $user = $this->get('security.token_storage')->getToken()->getUser();
-        // $cart = $rep->findOneBy(['usercart' => $user]);
-        // $a = $cartDetailrepo->findOneBy(['cartid' => $cart]);
-
         if(!$user){
             return $this->redirectToRoute('app_login');
         }else{
@@ -39,10 +36,8 @@ class CartController extends AbstractController
             ]);
         }
 
-            // return $this->json($cart);
-            // return $this->render('cart/index.html.twig');
-        
     }
+
 
 
     /**
