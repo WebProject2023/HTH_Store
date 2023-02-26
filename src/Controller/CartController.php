@@ -101,4 +101,12 @@ class CartController extends AbstractController
         return $this->redirectToRoute('showcart');
     }
 
+    /**
+     * @Route("/cart/paymeny", name="app_cart_payment")
+     */
+    public function paymentAction(): Response
+    {
+        return $this->render('cart/paymentCart.html.twig', []);
+    }
+
 }
