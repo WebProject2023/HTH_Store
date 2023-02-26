@@ -87,4 +87,18 @@ class CartController extends AbstractController
         return $this->redirectToRoute('show_cart');
     }
 
+    /**
+     * @Route("/cart/delete/{id}", name="app_cart_delete")
+     */
+    public function delete($id, CartDetailRepository $repo, ManagerRegistry $reg): Response
+    {
+        $entity = $reg->getManager();
+        $cartd = $repo->find($id);
+
+        $entity->remove($cartd);
+        $entity->flush();
+
+        return $this->redirectToRoute('showcart');
+    }
+
 }
