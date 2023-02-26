@@ -10,15 +10,19 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class SearchController extends AbstractController
 {
-    /**
-     * @Route("/search", name="search_product", methods={"GET"})
+     /**
+     * @Route("/search", name="search_page", methods={"POST"})
      */
     public function searchAction(ProductRepository $repo, Request $req): Response
     {
-        $mess = $req->query->get('search');
-        $product = $repo->findBySearchProduct($mess);
+        $search = $req -> request -> get('search');
+        $product = $repo->getProductByName($search);
+        
         return $this->render('search/index.html.twig', [
-            'search'=>$product
+            'products' => $product,
+            'keyword' => $search,
+            
+
         ]);
     }
 }
