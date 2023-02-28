@@ -44,7 +44,7 @@
       <!-- Navbar brand -->
       <a class="navbar-brand mt-2 mt-sm-0" href="#">
         <img
-          src="https://talent2win.com/wp-content/uploads/2021/09/LogoDefault.png"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjLfYiW4EUa601TuGApGTpTqiF5PF3gK9N4w&usqp=CAU"
           height="20"
           alt="Logo"
           loading="lazy"
@@ -58,7 +58,7 @@
         {% if app.user %}
         {% if  is_granted ('ROLE_ADMIN') %}
         <li class="nav-item">
-          <a class="nav-link" href="{{path('product_show')}}">Product</a>
+          <a class="nav-link" href="{{path('product_show')}}">Management </a>
         </li>
         {% endif %}
         {% endif %}
