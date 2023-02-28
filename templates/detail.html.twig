@@ -41,7 +41,7 @@
                                 </div> #}
                             </div>
                             <div class="col-lg-9"> <button type="submit" class="btn btn-primary shop-button">
-                            <a href ="{{ path('app_cart', {'id': p.id}) }}">Add to Cart</button> 
+                            <a href ="{{ path('app_cart', {'id': p.id}) }}" onclick="payment()" style="color:black; text-decoration:none;">Add to Cart</button> 
                             <!-- <button type="button" class="btn btn-success shop-button">Buy Now</button> -->
                             </div>
                             </form>

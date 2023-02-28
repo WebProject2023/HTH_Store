@@ -30,7 +30,7 @@
                 <td>{{ brand.description }}</td>
                 <td>{{ brand.status ? 'Active' : 'Inactive' }}</td>
                 <td>
-                    <button type="button" class="btn btn-outline-secondary"><a href="{{ path('app_brand_show', {'id': brand.id}) }}">Show</a></button>
+                    {# <button type="button" class="btn btn-outline-secondary"><a href="{{ path('app_brand_show', {'id': brand.id}) }}">Show</a></button> #}
                     <button type="button" class="btn btn-outline-secondary"><a href="{{ path('app_brand_edit', {'id': brand.id}) }}">Edit</a></button>
                 </td>
             </tr>

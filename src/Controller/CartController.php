@@ -45,6 +45,7 @@ class CartController extends AbstractController
      */
     public function addcart(CartRepository $repo, $id, ManagerRegistry $reg, ProductRepository $prorepo, CartDetailRepository $cartDetailrepo): Response
     {
+        
         $cartDetail = new CartDetail();
         $user = $this->getUser();
 
