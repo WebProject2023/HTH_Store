@@ -48,9 +48,13 @@
         <li class="nav-item active">
           <a class="nav-link " href="{{path('homepage')}}">Home</a>
         </li>
+        {% if app.user %}
+        {% if  is_granted ('ROLE_USER') %}
         <li class="nav-item">
           <a class="nav-link" href="{{path('product_show')}}">Product</a>
         </li>
+        {% endif %}
+        {% endif %}
       </ul>
       <!-- Left links -->      
     </div>
