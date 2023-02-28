@@ -74,7 +74,7 @@
           <a class="nav-link me-3" href="{{ path('show_cart') }}">
             <i class="fas fa-shopping-cart"></i>
           </a>
-           Welcome {{ app.user.name }},
+           <a href="{{path('app_profile')}}">Welcome {{ app.user.name }}</a>,
           <a class="nav-link me-3" href="{{ path('app_logout') }}">Logout</a>
         {% else %}
         <a class="nav-link" href="{{ path('app_login') }}"><i class="">Login</i></a>
