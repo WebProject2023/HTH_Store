@@ -49,7 +49,7 @@
           <a class="nav-link " href="{{path('homepage')}}">Home</a>
         </li>
         {% if app.user %}
-        {% if  is_granted ('ROLE_USER') %}
+        {% if  is_granted ('ROLE_ADMIN') %}
         <li class="nav-item">
           <a class="nav-link" href="{{path('product_show')}}">Manage</a>
         </li>
